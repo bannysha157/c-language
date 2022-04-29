@@ -1,0 +1,32 @@
+//nthbit.c//
+#include <stdio.h>
+#include "nthbit.h"
+ // Total bits required to represent integer
+int main()
+{
+/*int BITS=4;
+    int num, msb;
+
+     Input number from user 
+    printf("Enter any number: ");
+    scanf("%d", &num);*/
+Nthbit();
+}
+//nthbit.h//
+
+#include<stdio.h>
+void Nthbit()
+{
+int n,num;//number
+printf("enter number\n");
+scanf("%d",&num);
+int BITS=4;
+ /* Move first bit of 1 to highest order */
+    n = 1 << (BITS - 1);
+
+    /* Perform bitwise AND with msb and num */
+    if(num & n)
+        printf("%d is set (1).", num);
+    else
+        printf("%d is unset (0).", num); 
+}
